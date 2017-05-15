@@ -66,7 +66,9 @@ void Mesh::process_() {
     BoundingBox box;
 
     for (size_t i = 0; i < mesh->mNumFaces; ++i) {
-        assert(mesh->mFaces[i].mNumIndices == 3);
+        if (mesh->mFaces[i].mNumIndices != 3) {
+            continue;
+        }
         std::array<float, 9> tri;
         int j = 0;
         for (size_t k = 0; k < mesh->mFaces[i].mNumIndices; ++k) {

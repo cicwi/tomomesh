@@ -8,7 +8,7 @@ vectors = np.array([[600, 0, 0, 0, 100, -200, 0, 1, 0, 0, 0, 1],
                    dtype='float32')
 proj_geom = astra.create_proj_geom('cone_vec', 600, 600, vectors)
 
-mesh = tm.Mesh('data/clock_lowres.obj')
+mesh = tm.Mesh('data/animated_gears_broken.dae')
 print(np.array(mesh.triangles()))
 print(np.array(mesh.bounding_box()))
 
